@@ -48,7 +48,7 @@ public class PolygonRemover {
     //удаление вершин из модели и обновление индексов полигонов после удаления вершин
     private static void removeVertices(Model model, ArrayList<Integer> verticesToRemove) {
         for (int i = verticesToRemove.size() - 1; i >= 0; i--) {
-            int vertexIndexToRemove = verticesToRemove.get(i);//получение текущего индекса для удаления вершины
+            int vertexIndexToRemove = verticesToRemove.get(i);
             model.vertices.remove(vertexIndexToRemove);
 
             for (Polygon polygon : model.polygons) {

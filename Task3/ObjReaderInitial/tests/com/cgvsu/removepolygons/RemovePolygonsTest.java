@@ -115,4 +115,51 @@ public class RemovePolygonsTest {
         assertEquals(0, model.polygons.size());
 
     }
+
+    @Test
+    public void testRemovePolygonsFromTeapot() throws IOException {
+        Path fileName = Path.of("C:/Users/anyad/IdeaProjects/CGtask3-master/3DModels/SimpleModelsForReaderTests/Teapot.obj");
+        String fileContent = Files.readString(fileName);
+        Model model = ObjReader.read(fileContent);
+
+        ArrayList<Integer> polygonsToRemove = new ArrayList<>();
+        polygonsToRemove.add(70);
+        polygonsToRemove.add(69);
+        polygonsToRemove.add(73);
+        polygonsToRemove.add(74);
+        removePolygons(model, polygonsToRemove, true);
+
+        assertEquals(529, model.vertices.size());
+        assertEquals(508, model.polygons.size());
+
+    }
+
+    @Test
+    public void testRemovePolygonsFromTeapot1() throws IOException {
+        Path fileName = Path.of("C:/Users/anyad/IdeaProjects/CGtask3-master/3DModels/SimpleModelsForReaderTests/Teapot.obj");
+        String fileContent = Files.readString(fileName);
+        Model model = ObjReader.read(fileContent);
+
+        ArrayList<Integer> polygonsToRemove = new ArrayList<>();
+        polygonsToRemove.add(70);
+        removePolygons(model, polygonsToRemove, false);
+
+        assertEquals(530, model.vertices.size());
+        assertEquals(511, model.polygons.size());
+
+    }
+    @Test
+    public void testRemovePolygonsFromWrapHead() throws IOException {
+        Path fileName = Path.of("C:/Users/anyad/IdeaProjects/CGtask3-master/3DModels/Faceform/WrapHead.obj");
+        String fileContent = Files.readString(fileName);
+        Model model = ObjReader.read(fileContent);
+
+        ArrayList<Integer> polygonsToRemove = new ArrayList<>();
+        polygonsToRemove.add(74);
+        removePolygons(model, polygonsToRemove, false);
+
+        assertEquals(4939, model.vertices.size());
+        assertEquals(4903, model.polygons.size());
+
+    }
 }
