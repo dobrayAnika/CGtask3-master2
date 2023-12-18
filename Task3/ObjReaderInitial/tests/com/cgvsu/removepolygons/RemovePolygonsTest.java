@@ -34,32 +34,32 @@ public class RemovePolygonsTest {
         model.vertices.add(new Vector3f(1, 1, 1)); // 7
 
         // Добавление полигонов куба
-        ArrayList<Integer> vertexIndices1 = new ArrayList<>(List.of(0, 1, 3, 2)); // Передняя грань
+        ArrayList<Integer> vertexIndices1 = new ArrayList<>(List.of(0, 1, 3, 2));
         Polygon polygon1 = new Polygon();
         polygon1.setVertexIndices(vertexIndices1);
         model.polygons.add(polygon1);
 
-        ArrayList<Integer> vertexIndices2 = new ArrayList<>(List.of(4, 5, 7, 6)); // Задняя грань
+        ArrayList<Integer> vertexIndices2 = new ArrayList<>(List.of(4, 5, 7, 6));
         Polygon polygon2 = new Polygon();
         polygon2.setVertexIndices(vertexIndices2);
         model.polygons.add(polygon2);
 
-        ArrayList<Integer> vertexIndices3 = new ArrayList<>(List.of(0, 1, 5, 4)); // Нижняя грань
+        ArrayList<Integer> vertexIndices3 = new ArrayList<>(List.of(0, 1, 5, 4));
         Polygon polygon3 = new Polygon();
         polygon3.setVertexIndices(vertexIndices3);
         model.polygons.add(polygon3);
 
-        ArrayList<Integer> vertexIndices4 = new ArrayList<>(List.of(2, 3, 7, 6)); // Верхняя грань
+        ArrayList<Integer> vertexIndices4 = new ArrayList<>(List.of(2, 3, 7, 6));
         Polygon polygon4 = new Polygon();
         polygon4.setVertexIndices(vertexIndices4);
         model.polygons.add(polygon4);
 
-        ArrayList<Integer> vertexIndices5 = new ArrayList<>(List.of(0, 2, 6, 4)); // Левая грань
+        ArrayList<Integer> vertexIndices5 = new ArrayList<>(List.of(0, 2, 6, 4));
         Polygon polygon5 = new Polygon();
         polygon5.setVertexIndices(vertexIndices5);
         model.polygons.add(polygon5);
 
-        ArrayList<Integer> vertexIndices6 = new ArrayList<>(List.of(1, 3, 7, 5)); // Правая грань
+        ArrayList<Integer> vertexIndices6 = new ArrayList<>(List.of(1, 3, 7, 5));
         Polygon polygon6 = new Polygon();
         polygon6.setVertexIndices(vertexIndices6);
         model.polygons.add(polygon6);
